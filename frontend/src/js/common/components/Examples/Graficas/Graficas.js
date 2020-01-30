@@ -5,6 +5,7 @@ import { Chart } from "react-google-charts";
 
 
 import GraficaSeriesMultiples from './GraficaSeriesMultiples';
+import GraficaStacked from './GraficaStacked';
 
 
 export default class Graficas extends Component {
@@ -19,7 +20,23 @@ export default class Graficas extends Component {
 
     render() {
         //const { data, loader, listar: onPageChange, onSortChange } = this.props;
-
+        const opciones = {   title: 'Población de las Ciudades más grandes de Estados Unidos',
+                             chartArea: { width: '50%' },
+                             hAxis: {
+                               title: 'Población Total',
+                               minValue: 0,
+                             },
+                             vAxis: {
+                               title: 'Ciudad',
+                             },
+                        }
+        const data = [   ['Ciudad', 'Población en 2010', 'Población en 2000'],
+                         ['Ciudad de Nueva York, NY', 8175000, 8008000],
+                         ['Los Angeles, CA', 3792000, 3694000],
+                         ['Chicago, IL', 2695000, 2896000],
+                         ['Houston, TX', 2099000, 1953000],
+                         ['Philadelphia, PA', 1526000, 1517000],
+                    ]
         return (
             <div className="py-4">
                <h2>GRÁFICAS</h2>
@@ -32,25 +49,15 @@ export default class Graficas extends Component {
                             <div className="p-0 px-3 py-3">
                                  <h4>Con series múltiples</h4>
                                  <GraficaSeriesMultiples 
-                                    data={[
-                                         ['Ciudad', 'Población en 2010', 'Población en 2000'],
-                                         ['Ciudad de Nueva York, NY', 8175000, 8008000],
-                                         ['Los Angeles, CA', 3792000, 3694000],
-                                         ['Chicago, IL', 2695000, 2896000],
-                                         ['Houston, TX', 2099000, 1953000],
-                                         ['Philadelphia, PA', 1526000, 1517000],
-                                    ]}
-                                    opciones={{
-                                         title: 'Población de las Ciudades más grandes de Estados Unidos',
-                                         chartArea: { width: '50%' },
-                                         hAxis: {
-                                           title: 'Población Total',
-                                           minValue: 0,
-                                         },
-                                         vAxis: {
-                                           title: 'Ciudad',
-                                         },
-                                       }}/>
+                                    data={ data }
+                                    opciones={ opciones }/>
+                            </div>
+                            <div className="p-0 px-3 py-3">
+                                 <h4>Stacked bar chart con múltiples series</h4>
+                                 <GraficaStacked 
+                                    data={ data }
+                                    opciones={opciones}/>
+
                             </div>
                         </div>
                     </div>
