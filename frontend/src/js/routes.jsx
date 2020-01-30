@@ -20,6 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Grids from "./common/components/Examples/Grids";
 import Notificaciones from './common/components/Examples/Notificaciones';
 import ExampleTabs from './common/components/Examples/Tabs/Tabs';
+import Graficas from './common/components/Examples/Graficas/Graficas';
 require('../style/index.css');
 
 module.exports = (
@@ -34,6 +35,7 @@ module.exports = (
                 <ProtectedRoute exact path="/grids" component={Grids} />
                 <ProtectedRoute exact path="/notifications" component={Notificaciones} />
                 <ProtectedRoute exact path="/tabs" component={ExampleTabs} />
+                <ProtectedRoute exact path="/graficas" component={Graficas} />
                 <Route component={NotFound} />
             </Switch>
         </div>
