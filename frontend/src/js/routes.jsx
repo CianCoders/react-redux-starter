@@ -20,7 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Grids from "./common/components/Examples/Grids";
 import Notificaciones from './common/components/Examples/Notificaciones';
 import ExampleTabs from './common/components/Examples/Tabs/Tabs';
-import Graficas from './common/components/Examples/Graficas/Graficas';
+import Graficas from './common/components/Examples/Graficas';
 require('../style/index.css');
 
 module.exports = (

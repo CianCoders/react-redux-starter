@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import { actions } from '../../../../redux/modules/usuarios/usuarios';
+import { actions } from '../../../../redux/modules/graficas/graficas';
 import Graficas from './Graficas';
 
 
 const ms2p = (state) => {
   return {
-    ...state.usuarios,
+    ...state.graficas,
   };
 };
 
