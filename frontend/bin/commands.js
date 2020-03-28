@@ -8,18 +8,24 @@ const port = config.get('port') || '8080';
 const option = process.argv[2];
 
 switch (option) {
-  case 'lint':
-    shell.exec('cross-env eslint --fix src/js/** --format node_modules/eslint-friendly-formatter . --ext .js --ext .jsx  --cache; exit 0');
-    break;
-  case 'dev':
-    shell.exec(`cross-env HOST=${host} PORT=${port} webpack-dev-server --config webpack.config.dev-server.babel.js --hot --progress --no-info --inline --colors --content-base ./docroot`);
-    break;
-  case 'build':
-    shell.exec(`cross-env rimraf docroot && webpack --config webpack.config.build.babel.js --progress --display-error-details`);
-    break;
-  default:
-    // If the app type is invalid, stop execution of the file.
-    console.log(colors.green('Invalid option.'));
-    console.log(colors.green('See README.md for more details.'));
-    return;
+    case 'lint':
+        shell.exec(
+            'cross-env eslint --fix src/js/** --format node_modules/eslint-friendly-formatter . --ext .js --ext .jsx  --cache; exit 0'
+        );
+        break;
+    case 'dev':
+        shell.exec(
+            `cross-env HOST=${host} PORT=${port} webpack-dev-server --config webpack.config.dev-server.babel.js --hot --progress --no-info --inline --colors --content-base ./docroot`
+        );
+        break;
+    case 'build':
+        shell.exec(
+            `cross-env rimraf docroot && webpack --config webpack.config.build.babel.js --progress --display-error-details`
+        );
+        break;
+    default:
+        // If the app type is invalid, stop execution of the file.
+        console.log(colors.green('Invalid option.'));
+        console.log(colors.green('See README.md for more details.'));
+        return;
 }

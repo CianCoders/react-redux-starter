@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import RegisterForm from './RegisterForm';
-import LoadMask from "../../Utils/LoadMask/LoadMask";
+import LoadMask from '../../Utils/LoadMask/LoadMask';
 
 class Registro extends Component {
     static propTypes = {
@@ -16,7 +16,7 @@ class Registro extends Component {
     render() {
         const { onSubmit, loader } = this.props;
         if (localStorage.getItem('token')) {
-            return (<Redirect to="/" />);
+            return <Redirect to="/" />;
         }
         return (
             <div className="blue-gradient-bg">
@@ -30,7 +30,10 @@ class Registro extends Component {
                         <h5 className="text-center pv">REGISTRO</h5>
                         <LoadMask loading={loader} light>
                             <RegisterForm onSubmit={onSubmit} />
-                            <span>¿Ya tienes cuenta?&nbsp;<Link to="/login">Ingresa aquí</Link></span>
+                            <span>
+                                ¿Ya tienes cuenta?&nbsp;
+                                <Link to="/login">Ingresa aquí</Link>
+                            </span>
                         </LoadMask>
                     </div>
                 </div>

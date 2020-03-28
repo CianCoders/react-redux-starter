@@ -1,19 +1,18 @@
 import { handleActions } from 'redux-actions';
-import { push } from "react-router-redux";
-import { NotificationManager } from "react-notifications";
-import { api } from "api";
-import {setMe} from "./login";
+import { push } from 'react-router-redux';
+import { NotificationManager } from 'react-notifications';
+import { api } from 'api';
+import { setMe } from './login';
 
 const LOADER = 'LOGIN_LOADER';
 
-export const constants = {
-};
+export const constants = {};
 
 // ------------------------------------
 // Pure Actions
 // ------------------------------------
 
-export const setLoader = loader => ({
+export const setLoader = (loader) => ({
     type: LOADER,
     loader,
 });
@@ -21,16 +20,27 @@ export const setLoader = loader => ({
 // Actions
 // ------------------------------------
 
-export const update = (data = {}, attachments=[]) => (dispatch, getStore) => {
+export const update = (data = {}, attachments = []) => (dispatch, getStore) => {
     dispatch(setLoader(true));
-    api.putAttachments('user/update_me', data, attachments).then((response) => {
-        dispatch(setMe(response));
-        NotificationManager.success('Datos actualizados exitosamente', 'ERROR', 1000);
-    }).catch(() => {
-        NotificationManager.error('Credenciales incorrectas, vuelva a intentar', 'ERROR', 0);
-    }).finally(() => {
-        dispatch(setLoader(false));
-    });
+    api.putAttachments('user/update_me', data, attachments)
+        .then((response) => {
+            dispatch(setMe(response));
+            NotificationManager.success(
+                'Datos actualizados exitosamente',
+                'ERROR',
+                1000
+            );
+        })
+        .catch(() => {
+            NotificationManager.error(
+                'Credenciales incorrectas, vuelva a intentar',
+                'ERROR',
+                0
+            );
+        })
+        .finally(() => {
+            dispatch(setLoader(false));
+        });
 };
 
 export const actions = {

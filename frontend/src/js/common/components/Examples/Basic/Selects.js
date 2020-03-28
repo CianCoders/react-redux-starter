@@ -1,22 +1,21 @@
-import React, {Component} from 'react';
-import { Field } from "redux-form";
+import React, { Component } from 'react';
+import { Field } from 'redux-form';
 import {
     SelectField,
     AsyncSelectField,
     CreatableSelectField,
-} from "Utils/renderField/renderField";
-
+} from 'Utils/renderField/renderField';
 
 const exampleOptions = [
-    {"label": "Primary", "value": "Primary"},
-    {"label": "Secondary", "value": "Secondary"},
-    {"label": "Success", "value": "Success"},
-    {"label": "Danger", "value": "Danger"},
-    {"label": "Warning", "value": "Warning"},
+    { label: 'Primary', value: 'Primary' },
+    { label: 'Secondary', value: 'Secondary' },
+    { label: 'Success', value: 'Success' },
+    { label: 'Danger', value: 'Danger' },
+    { label: 'Warning', value: 'Warning' },
 ];
 
 const filterOptions = (inputValue) => {
-    return exampleOptions.filter(i =>
+    return exampleOptions.filter((i) =>
         i.label.toLowerCase().includes(inputValue.toLowerCase())
     );
 };
@@ -27,13 +26,14 @@ const loadOptions = (inputValue, callback) => {
     }, 1000);
 };
 
-
 class Inputs extends Component {
     render() {
         return (
             <div className="border-top p-0 px-3 pt-3">
                 <div className="mb-3 col-12">
-                    <strong className="text-muted d-block mb-2">Select Inputs</strong>
+                    <strong className="text-muted d-block mb-2">
+                        Select Inputs
+                    </strong>
                     <div className="row">
                         <div className="col-12 mb-2">
                             <label htmlFor="select_field">Select</label>
@@ -44,7 +44,9 @@ class Inputs extends Component {
                             />
                         </div>
                         <div className="col-12 mb-2">
-                            <label htmlFor="multi_select_field">Multi Select</label>
+                            <label htmlFor="multi_select_field">
+                                Multi Select
+                            </label>
                             <Field
                                 name="multi_select_field"
                                 isMulti
@@ -61,7 +63,9 @@ class Inputs extends Component {
                             />
                         </div>
                         <div className="col-12 mb-2">
-                            <label htmlFor="creatable_select_field">Creatable Select</label>
+                            <label htmlFor="creatable_select_field">
+                                Creatable Select
+                            </label>
                             <Field
                                 name="creatable_select_field"
                                 options={exampleOptions}

@@ -37,9 +37,9 @@
 }
 
 .loader-container.dark {
-    background: rgba(40, 40, 40, 0.1)
+    background: rgba(40, 40, 40, 0.1);
 }
 
 .loader-container.light {
-    background: rgba(255, 255, 255, 0.5)
+    background: rgba(255, 255, 255, 0.5);
 }

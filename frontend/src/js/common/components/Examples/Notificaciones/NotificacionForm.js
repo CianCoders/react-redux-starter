@@ -1,13 +1,20 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
-import {validate, validators} from 'validate-redux-form';
-import {renderField, renderFieldRadio, renderTextArea} from '../../Utils/renderField/renderField';
-
+import { Field, reduxForm } from 'redux-form';
+import { validate, validators } from 'validate-redux-form';
+import {
+    renderField,
+    renderFieldRadio,
+    renderTextArea,
+} from '../../Utils/renderField/renderField';
 
 const NotificacionForm = (props) => {
     const { handleSubmit } = props;
     return (
-        <form name="notificacioForm" className="form-validate mb-lg" onSubmit={handleSubmit}>
+        <form
+            name="notificacioForm"
+            className="form-validate mb-lg"
+            onSubmit={handleSubmit}
+        >
             <div className="row">
                 <div className="col-lg-6">
                     <h4>Tipo de notificacion</h4>
@@ -71,8 +78,7 @@ const NotificacionForm = (props) => {
                     </div>
                     <div className="row mb-5 mt-4">
                         <div className="col-lg-12 d-flex justify-content-end">
-                            <button
-                                className="btn btn-primary">
+                            <button className="btn btn-primary">
                                 ENVIAR NOTIFICACION
                             </button>
                         </div>

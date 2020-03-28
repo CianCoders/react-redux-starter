@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
     render() {
@@ -14,7 +14,9 @@ class Footer extends Component {
                                 </Link>
                             </li>
                         </ul>
-                        <span className="copyright ml-auto my-auto mr-2">Ciancoders</span>
+                        <span className="copyright ml-auto my-auto mr-2">
+                            Ciancoders
+                        </span>
                     </div>
                 </div>
             </footer>

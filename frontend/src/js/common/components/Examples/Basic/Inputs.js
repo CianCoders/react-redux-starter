@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
-import { Field } from "redux-form";
+import React, { Component } from 'react';
+import { Field } from 'redux-form';
 import {
     renderCurrency,
     renderNumber,
     renderField,
     renderFilePicker,
     renderTextArea,
-} from "Utils/renderField/renderField";
-
+} from 'Utils/renderField/renderField';
 
 class Inputs extends Component {
     render() {
@@ -42,7 +41,9 @@ class Inputs extends Component {
                             />
                         </div>
                         <div className="col-md-6 col-12 mb-2">
-                            <label htmlFor="number_field">Number Field decimal scale</label>
+                            <label htmlFor="number_field">
+                                Number Field decimal scale
+                            </label>
                             <Field
                                 decimalScale={2}
                                 name="number_field_fixed_decimals"
@@ -51,7 +52,9 @@ class Inputs extends Component {
                             />
                         </div>
                         <div className="col-md-6 col-12 mb-2">
-                            <label htmlFor="number_field">Number Field with suffix</label>
+                            <label htmlFor="number_field">
+                                Number Field with suffix
+                            </label>
                             <Field
                                 name="number_field_suffix"
                                 decimalScale={2}
@@ -61,7 +64,9 @@ class Inputs extends Component {
                             />
                         </div>
                         <div className="col-md-6 col-12 mb-2">
-                            <label htmlFor="number_field">Number Field with prefix</label>
+                            <label htmlFor="number_field">
+                                Number Field with prefix
+                            </label>
                             <Field
                                 name="number_field_prefix"
                                 decimalScale={2}
@@ -79,7 +84,9 @@ class Inputs extends Component {
                             />
                         </div>
                         <div className="col-md-6 col-12 mb-2">
-                            <label htmlFor="number_field">Number Field specific format</label>
+                            <label htmlFor="number_field">
+                                Number Field specific format
+                            </label>
                             <Field
                                 name="number_field_prefix_format"
                                 decimalScale={2}

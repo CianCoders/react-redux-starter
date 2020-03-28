@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BootstrapTable } from 'react-bootstrap-table';
-import LoadMask from "../LoadMask/LoadMask";
-
+import LoadMask from '../LoadMask/LoadMask';
 
 export default class Grid extends Component {
     static propTypes = {
@@ -13,7 +12,7 @@ export default class Grid extends Component {
     };
 
     static defaultProps = {
-        loading: false
+        loading: false,
     };
 
     render() {
@@ -21,7 +20,7 @@ export default class Grid extends Component {
             loading,
             data,
             page,
-            remote=true,
+            remote = true,
             expandableRow,
             expandComponent,
             cellEditProp,
@@ -43,7 +42,7 @@ export default class Grid extends Component {
             page,
             onPageChange: onPageChange ? onPageChange : () => {},
             onSortChange: onSortChange ? onSortChange : () => {},
-            onExpand:onExpand
+            onExpand: onExpand,
         };
 
         const paginar = !(pagination === false);
@@ -66,7 +65,6 @@ export default class Grid extends Component {
                     />
                 </LoadMask>
             </div>
-
-        )
+        );
     }
 }

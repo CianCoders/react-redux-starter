@@ -1,11 +1,11 @@
-import React,  {Component} from "react";
-import './FileUploader.css'
+import React, { Component } from 'react';
+import './FileUploader.css';
 
 const defaultProps = {
     baseColor: 'gray',
     activeColor: 'green',
     overlayColor: 'rgba(255,255,255,0.3)',
-    opacity:0
+    opacity: 0,
 };
 
 class FileUploader extends Component {
@@ -14,22 +14,26 @@ class FileUploader extends Component {
         this.state = {
             active: false,
             imageSrc: '',
-            loaded: false
+            loaded: false,
         };
 
-        this.onDragEnter  = this.onDragEnter.bind(this);
-        this.onDragLeave  = this.onDragLeave.bind(this);
-        this.onDrop       = this.onDrop.bind(this);
+        this.onDragEnter = this.onDragEnter.bind(this);
+        this.onDragLeave = this.onDragLeave.bind(this);
+        this.onDrop = this.onDrop.bind(this);
         this.onFileChange = this.onFileChange.bind(this);
     }
     componentDidUpdate() {
-        if (this.state.imageSrc === '' && this.props.source !== undefined && this.props.source !== null) {
-            this.setState({imageSrc: this.props.source, loaded: true})
+        if (
+            this.state.imageSrc === '' &&
+            this.props.source !== undefined &&
+            this.props.source !== null
+        ) {
+            this.setState({ imageSrc: this.props.source, loaded: true });
         }
     }
 
-    componentWillMount(){
-        if (this.props.img !== null && this.props.img !== undefined){
+    componentWillMount() {
+        if (this.props.img !== null && this.props.img !== undefined) {
             // setea la imágen si se le envia una
             this.setState({
                 imageSrc: this.props.img,
@@ -38,12 +42,12 @@ class FileUploader extends Component {
             });
         }
     }
-    componentWillReceiveProps(nextProps){
-        if (nextProps.img !== null && nextProps.img !== undefined){
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.img !== null && nextProps.img !== undefined) {
             // setea la imágen si se le envia una
             this.setState({
                 imageSrc: nextProps.img,
-                loaded: true
+                loaded: true,
             });
         }
     }
@@ -73,7 +77,7 @@ class FileUploader extends Component {
         const imagePattern = /image-*/;
 
         const reader = new FileReader();
-        if (file){
+        if (file) {
             const isImage = !!file.type.match(imagePattern);
             if (!file.type.match(pattern)) {
                 alert('Formato inválido');
@@ -86,7 +90,7 @@ class FileUploader extends Component {
                 this.setState({
                     imageSrc: reader.result,
                     isImage,
-                    loaded: true
+                    loaded: true,
                 });
             };
             reader.readAsDataURL(file);
@@ -104,13 +108,13 @@ class FileUploader extends Component {
     render() {
         let state = this.state,
             props = defaultProps,
-            labelClass  = `uploader ${state.loaded && 'loaded'}`,
+            labelClass = `uploader ${state.loaded && 'loaded'}`,
             borderColor = state.active ? props.activeColor : props.baseColor,
-            iconColor   = state.active
+            iconColor = state.active
                 ? props.activeColor
-                : (state.loaded)
-                    ? props.overlayColor
-                    : props.baseColor,
+                : state.loaded
+                ? props.overlayColor
+                : props.baseColor,
             hideIcon = state.loaded ? 0 : 1;
 
         return (
@@ -120,16 +124,37 @@ class FileUploader extends Component {
                 onDragLeave={this.onDragLeave}
                 onDragOver={this.onDragOver}
                 onDrop={this.onDrop}
-                style={{outlineColor: borderColor}}>
-
-                <img src={state.isImage ? state.imageSrc : require('assets/img/uploaded.png')} className={state.loaded ? 'loaded' : undefined}/>
-                <img style={{ color: iconColor, opacity: hideIcon }} className="icon icon-upload"
-                     src={require(`assets/img/upload.png`)} alt=""/>
-                <p className="texto gris text-center" style={{opacity:hideIcon}}>Subir Archivo</p>
-                <input disabled={this.props.disabled} type="file" accept="/*" onChange={this.onFileChange} ref="input" />
-
+                style={{ outlineColor: borderColor }}
+            >
+                <img
+                    src={
+                        state.isImage
+                            ? state.imageSrc
+                            : require('assets/img/uploaded.png')
+                    }
+                    className={state.loaded ? 'loaded' : undefined}
+                />
+                <img
+                    style={{ color: iconColor, opacity: hideIcon }}
+                    className="icon icon-upload"
+                    src={require(`assets/img/upload.png`)}
+                    alt=""
+                />
+                <p
+                    className="texto gris text-center"
+                    style={{ opacity: hideIcon }}
+                >
+                    Subir Archivo
+                </p>
+                <input
+                    disabled={this.props.disabled}
+                    type="file"
+                    accept="/*"
+                    onChange={this.onFileChange}
+                    ref="input"
+                />
             </label>
         );
     }
 }
-export default FileUploader
+export default FileUploader;
