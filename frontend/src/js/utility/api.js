@@ -1,6 +1,5 @@
 const request = require('superagent');
 
-
 /**
  * Funcion para obtener el token
  * */
@@ -65,10 +64,18 @@ function _post(path, body, params = {}) {
     const url = makeUrl(path, params);
     const token = getToken();
     if (getToken()) {
-        return request.post(url).send(body).set('Accept', 'application/json').set('Content-Type', 'application/json')
+        return request
+            .post(url)
+            .send(body)
+            .set('Accept', 'application/json')
+            .set('Content-Type', 'application/json')
             .set('Authorization', token);
     }
-    return request.post(url).send(body).set('Accept', 'application/json').set('Content-Type', 'application/json');
+    return request
+        .post(url)
+        .send(body)
+        .set('Accept', 'application/json')
+        .set('Content-Type', 'application/json');
 }
 
 /**
@@ -80,15 +87,17 @@ function _post(path, body, params = {}) {
  * */
 function post(path, body, params = {}) {
     return new Promise((resolve, reject) => {
-        _post(path, body, params).then((response) => {
-            if (response.body) {
-                resolve(response.body);
-            }
-            resolve(response);
-        }).catch((error) => {
-            errorHandler(error.response);
-            reject(error.response.body);
-        });
+        _post(path, body, params)
+            .then((response) => {
+                if (response.body) {
+                    resolve(response.body);
+                }
+                resolve(response);
+            })
+            .catch((error) => {
+                errorHandler(error.response);
+                reject(error.response.body);
+            });
     });
 }
 
@@ -127,15 +136,17 @@ function _postMultiPart(path, body, attachments, params = {}) {
  * */
 function postAttachments(path, body, attachments, params = {}) {
     return new Promise((resolve, reject) => {
-        _postMultiPart(path, body, attachments, params).then((response) => {
-            if (response.body) {
-                resolve(response.body);
-            }
-            resolve(response);
-        }).catch((error) => {
-            errorHandler(error.response);
-            reject(error.response.body);
-        });
+        _postMultiPart(path, body, attachments, params)
+            .then((response) => {
+                if (response.body) {
+                    resolve(response.body);
+                }
+                resolve(response);
+            })
+            .catch((error) => {
+                errorHandler(error.response);
+                reject(error.response.body);
+            });
     });
 }
 
@@ -174,15 +185,17 @@ function _putMultiPart(path, body, attachments, params = {}) {
  * */
 function putAttachments(path, body, attachments, params = {}) {
     return new Promise((resolve, reject) => {
-        _putMultiPart(path, body, attachments, params).then((response) => {
-            if (response.body) {
-                resolve(response.body);
-            }
-            resolve(response);
-        }).catch((error) => {
-            errorHandler(error.response);
-            reject(error.response.body);
-        });
+        _putMultiPart(path, body, attachments, params)
+            .then((response) => {
+                if (response.body) {
+                    resolve(response.body);
+                }
+                resolve(response);
+            })
+            .catch((error) => {
+                errorHandler(error.response);
+                reject(error.response.body);
+            });
     });
 }
 
@@ -197,10 +210,18 @@ function _put(path, body, params = {}) {
     const url = makeUrl(path, params);
     const token = getToken();
     if (getToken()) {
-        return request.put(url).send(body).set('Accept', 'application/json').set('Content-Type', 'application/json')
+        return request
+            .put(url)
+            .send(body)
+            .set('Accept', 'application/json')
+            .set('Content-Type', 'application/json')
             .set('Authorization', token);
     }
-    return request.put(url).send(body).set('Accept', 'application/json').set('Content-Type', 'application/json');
+    return request
+        .put(url)
+        .send(body)
+        .set('Accept', 'application/json')
+        .set('Content-Type', 'application/json');
 }
 
 /**
@@ -212,15 +233,17 @@ function _put(path, body, params = {}) {
  * */
 function put(path, body, params = {}) {
     return new Promise((resolve, reject) => {
-        _put(path, body, params).then((response) => {
-            if (response.body) {
-                resolve(response.body);
-            }
-            resolve(response);
-        }).catch((error) => {
-            errorHandler(error.response);
-            reject(error.response.body);
-        });
+        _put(path, body, params)
+            .then((response) => {
+                if (response.body) {
+                    resolve(response.body);
+                }
+                resolve(response);
+            })
+            .catch((error) => {
+                errorHandler(error.response);
+                reject(error.response.body);
+            });
     });
 }
 /**
@@ -232,10 +255,16 @@ function _delete(path) {
     const url = makeUrl(path);
     const token = getToken();
     if (getToken()) {
-        return request.delete(url).set('Accept', 'application/json').set('Content-Type', 'application/json')
+        return request
+            .delete(url)
+            .set('Accept', 'application/json')
+            .set('Content-Type', 'application/json')
             .set('Authorization', token);
     }
-    return request.delete(url).set('Accept', 'application/json').set('Content-Type', 'application/json');
+    return request
+        .delete(url)
+        .set('Accept', 'application/json')
+        .set('Content-Type', 'application/json');
 }
 
 /**
@@ -245,15 +274,17 @@ function _delete(path) {
  * */
 function eliminar(path) {
     return new Promise((resolve, reject) => {
-        _delete(path).then((response) => {
-            if (response.body) {
-                resolve(response.body);
-            }
-            resolve(response);
-        }).catch((error) => {
-            errorHandler(error.response);
-            reject(error.response.body);
-        });
+        _delete(path)
+            .then((response) => {
+                if (response.body) {
+                    resolve(response.body);
+                }
+                resolve(response);
+            })
+            .catch((error) => {
+                errorHandler(error.response);
+                reject(error.response.body);
+            });
     });
 }
 
@@ -267,10 +298,16 @@ function _get(path, params = {}) {
     const url = makeUrl(path, params);
     const token = getToken();
     if (getToken()) {
-        return request.get(url).set('Accept', 'application/json').set('Content-Type', 'application/json')
+        return request
+            .get(url)
+            .set('Accept', 'application/json')
+            .set('Content-Type', 'application/json')
             .set('Authorization', token);
     }
-    return request.get(url).set('Accept', 'application/json').set('Content-Type', 'application/json');
+    return request
+        .get(url)
+        .set('Accept', 'application/json')
+        .set('Content-Type', 'application/json');
 }
 
 /**
@@ -281,16 +318,25 @@ function _get(path, params = {}) {
  * */
 function get(path, params = {}) {
     return new Promise((resolve, reject) => {
-        _get(path, params).then((response) => {
-            if (response.body) {
-                resolve(response.body);
-            }
-            resolve(response);
-        }).catch((error) => {
-            errorHandler(error.response);
-            reject(error.response);
-        });
+        _get(path, params)
+            .then((response) => {
+                if (response.body) {
+                    resolve(response.body);
+                }
+                resolve(response);
+            })
+            .catch((error) => {
+                errorHandler(error.response);
+                reject(error.response);
+            });
     });
 }
 
-export const api = { get, post, put, eliminar, postAttachments, putAttachments };
+export const api = {
+    get,
+    post,
+    put,
+    eliminar,
+    postAttachments,
+    putAttachments,
+};

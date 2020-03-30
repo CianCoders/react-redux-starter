@@ -6,5 +6,5 @@ export {
     renderSelectField,
     renderNumber,
     renderCurrency,
-    renderSwitch
-} from './renderField'
+    renderSwitch,
+} from './renderField';

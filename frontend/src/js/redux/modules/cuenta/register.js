@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
-import { push } from "react-router-redux";
-import { NotificationManager } from "react-notifications";
-import { api } from "api";
+import { push } from 'react-router-redux';
+import { NotificationManager } from 'react-notifications';
+import { api } from 'api';
 
 const SUBMIT = 'REGISTER_SUBMIT';
 const LOADER = 'REGISTER_LOADER';
@@ -14,7 +14,7 @@ export const constants = {
 // Pure Actions
 // ------------------------------------
 
-export const setLoader = loader => ({
+export const setLoader = (loader) => ({
     type: LOADER,
     loader,
 });
@@ -25,20 +25,30 @@ export const setLoader = loader => ({
 
 export const onSubmit = (data = {}) => (dispatch) => {
     dispatch(setLoader(true));
-    api.post('user', data).then(() => {
-        dispatch(push("/login"));
-        NotificationManager.success('Cuenta creada con éxito, puedes iniciar sesión', 'Éxito', 3000);
-    }).catch(() => {
-        NotificationManager.error('Credenciales incorrectas, vuelva a intentar', 'ERROR', 0);
-    }).finally(() => {
-        dispatch(setLoader(false));
-    });
+    api.post('user', data)
+        .then(() => {
+            dispatch(push('/login'));
+            NotificationManager.success(
+                'Cuenta creada con éxito, puedes iniciar sesión',
+                'Éxito',
+                3000
+            );
+        })
+        .catch(() => {
+            NotificationManager.error(
+                'Credenciales incorrectas, vuelva a intentar',
+                'ERROR',
+                0
+            );
+        })
+        .finally(() => {
+            dispatch(setLoader(false));
+        });
 };
 
 export const logOut = () => (dispatch) => {
     localStorage.removeItem('token');
 };
-
 
 export const actions = {
     onSubmit,

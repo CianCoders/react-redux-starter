@@ -1,6 +1,6 @@
 .date-picker-custom-overlay {
     position: absolute;
-    background-color: #FFF;
+    background-color: #fff;
     z-index: 10000;
     border-radius: 0.5em;
     border: 0.1em solid #cacaca;

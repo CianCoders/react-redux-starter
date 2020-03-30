@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { TableHeaderColumn } from "react-bootstrap-table";
-import Grid from "../../Utils/Grid";
-import {standardActions} from "../../Utils/Grid/StandardActions";
-
+import { TableHeaderColumn } from 'react-bootstrap-table';
+import Grid from '../../Utils/Grid';
+import { standardActions } from '../../Utils/Grid/StandardActions';
 
 export default class Grids extends Component {
     static propTypes = {
@@ -14,7 +13,7 @@ export default class Grids extends Component {
     };
 
     static defaultProps = {
-        loading: false
+        loading: false,
     };
 
     componentWillMount() {
@@ -31,9 +30,16 @@ export default class Grids extends Component {
                 <div className="row">
                     <div className="mb-4 col-lg-6">
                         <div className="mb-4 card card-small">
-                            <div className="border-bottom card-header"><h6 className="m-0">Estándar</h6></div>
+                            <div className="border-bottom card-header">
+                                <h6 className="m-0">Estándar</h6>
+                            </div>
                             <div className="p-0 px-3 pt-3">
-                                <Grid data={data} loading={loader} onPageChange={onPageChange} onSortChange={onSortChange} >
+                                <Grid
+                                    data={data}
+                                    loading={loader}
+                                    onPageChange={onPageChange}
+                                    onSortChange={onSortChange}
+                                >
                                     <TableHeaderColumn
                                         isKey
                                         dataField="username"
@@ -59,9 +65,17 @@ export default class Grids extends Component {
                     </div>
                     <div className="mb-4 col-lg-6">
                         <div className="mb-4 card card-small">
-                            <div className="border-bottom card-header"><h6 className="m-0">Hover</h6></div>
+                            <div className="border-bottom card-header">
+                                <h6 className="m-0">Hover</h6>
+                            </div>
                             <div className="p-0 px-3 pt-3">
-                                <Grid hover data={data} loading={loader} onPageChange={onPageChange} onSortChange={onSortChange} >
+                                <Grid
+                                    hover
+                                    data={data}
+                                    loading={loader}
+                                    onPageChange={onPageChange}
+                                    onSortChange={onSortChange}
+                                >
                                     <TableHeaderColumn
                                         isKey
                                         dataField="username"
@@ -87,9 +101,17 @@ export default class Grids extends Component {
                     </div>
                     <div className="mb-4 col-lg-6">
                         <div className="mb-4 card card-small">
-                            <div className="border-bottom card-header"><h6 className="m-0">Stripped</h6></div>
+                            <div className="border-bottom card-header">
+                                <h6 className="m-0">Stripped</h6>
+                            </div>
                             <div className="p-0 px-3 pt-3">
-                                <Grid striped data={data} loading={loader} onPageChange={onPageChange} onSortChange={onSortChange} >
+                                <Grid
+                                    striped
+                                    data={data}
+                                    loading={loader}
+                                    onPageChange={onPageChange}
+                                    onSortChange={onSortChange}
+                                >
                                     <TableHeaderColumn
                                         isKey
                                         dataField="username"
@@ -115,9 +137,18 @@ export default class Grids extends Component {
                     </div>
                     <div className="mb-4 col-lg-6">
                         <div className="mb-4 card card-small">
-                            <div className="border-bottom card-header"><h6 className="m-0">Stripped Hover</h6></div>
+                            <div className="border-bottom card-header">
+                                <h6 className="m-0">Stripped Hover</h6>
+                            </div>
                             <div className="p-0 px-3 pt-3">
-                                <Grid hover striped data={data} loading={loader} onPageChange={onPageChange} onSortChange={onSortChange} >
+                                <Grid
+                                    hover
+                                    striped
+                                    data={data}
+                                    loading={loader}
+                                    onPageChange={onPageChange}
+                                    onSortChange={onSortChange}
+                                >
                                     <TableHeaderColumn
                                         isKey
                                         dataField="username"
@@ -143,9 +174,18 @@ export default class Grids extends Component {
                     </div>
                     <div className="mb-4 col-12">
                         <div className="mb-4 card card-small">
-                            <div className="border-bottom card-header"><h6 className="m-0">With Actions</h6></div>
+                            <div className="border-bottom card-header">
+                                <h6 className="m-0">With Actions</h6>
+                            </div>
                             <div className="p-0 px-3 pt-3">
-                                <Grid hover striped data={data} loading={loader} onPageChange={onPageChange} onSortChange={onSortChange} >
+                                <Grid
+                                    hover
+                                    striped
+                                    data={data}
+                                    loading={loader}
+                                    onPageChange={onPageChange}
+                                    onSortChange={onSortChange}
+                                >
                                     <TableHeaderColumn
                                         isKey
                                         dataField="username"
@@ -169,7 +209,11 @@ export default class Grids extends Component {
                                         dataField="id"
                                         dataAlign="center"
                                         dataSort
-                                        dataFormat={standardActions({ editar: "grids", ver: "grids", eliminar: () => {} })}
+                                        dataFormat={standardActions({
+                                            editar: 'grids',
+                                            ver: 'grids',
+                                            eliminar: () => {},
+                                        })}
                                     >
                                         Acciones
                                     </TableHeaderColumn>
@@ -179,6 +223,6 @@ export default class Grids extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }

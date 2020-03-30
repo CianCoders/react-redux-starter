@@ -12,14 +12,12 @@ let initialState = {};
 
 // rehydrate initialState for JS app
 if (window.__INITIAL_STATE__) {
-  initialState = window.__INITIAL_STATE__;
+    initialState = window.__INITIAL_STATE__;
 
-  // Transform into Immutable.js collections,
-  // but leave top level keys untouched for Redux
-  Object
-    .keys(initialState)
-    .forEach((key) => {
-      initialState[key] = fromJS(initialState[key]);
+    // Transform into Immutable.js collections,
+    // but leave top level keys untouched for Redux
+    Object.keys(initialState).forEach((key) => {
+        initialState[key] = fromJS(initialState[key]);
     });
 }
 
@@ -32,6 +30,6 @@ const history = syncHistoryWithStore(hashHistory, store);
 // Render the React application to the DOM
 // Root component is to bootstrap Provider, Router and DevTools
 ReactDOM.render(
-  <Root history={history} routes={routes} store={store} />,
-  document.getElementById('app-container')
+    <Root history={history} routes={routes} store={store} />,
+    document.getElementById('app-container')
 );

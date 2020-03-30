@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import NotificacionForm from './NotificacionForm';
 import NotificacionSweetForm from './NotificacionSweetForm';
 
-
 class Notificaciones extends Component {
     render() {
         const { handleSubmit, showSweet } = this.props;
@@ -13,12 +12,12 @@ class Notificaciones extends Component {
                     <div className="mb-4 col-lg-12">
                         <div className="mb-4 card card-small">
                             <div className="border-bottom card-header d-flex justify-content-center">
-                                <h3 className="m-0">Notificaciones de tostadora</h3>
+                                <h3 className="m-0">
+                                    Notificaciones de tostadora
+                                </h3>
                             </div>
                             <div className="p-0 px-3 pt-3">
-                                <NotificacionForm
-                                    onSubmit={handleSubmit}
-                                />
+                                <NotificacionForm onSubmit={handleSubmit} />
                             </div>
                         </div>
                     </div>
@@ -27,12 +26,12 @@ class Notificaciones extends Component {
                     <div className="mb-4 col-lg-12">
                         <div className="mb-4 card card-small">
                             <div className="border-bottom card-header d-flex justify-content-center">
-                                <h3 className="m-0">Notificaciones de SweetAlert2</h3>
+                                <h3 className="m-0">
+                                    Notificaciones de SweetAlert2
+                                </h3>
                             </div>
                             <div className="p-0 px-3 pt-3">
-                                <NotificacionSweetForm
-                                    onSubmit={showSweet}
-                                />
+                                <NotificacionSweetForm onSubmit={showSweet} />
                             </div>
                         </div>
                     </div>

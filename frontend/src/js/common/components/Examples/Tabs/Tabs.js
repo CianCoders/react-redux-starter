@@ -3,7 +3,6 @@ import Tabs, { TabPane } from 'rc-tabs';
 import TabContent from 'rc-tabs/lib/TabContent';
 import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
 
-
 class ExampleTabs extends Component {
     render() {
         return (
@@ -23,54 +22,93 @@ class ExampleTabs extends Component {
                                     renderTabBar={() => <ScrollableInkTabBar />}
                                     renderTabContent={() => <TabContent />}
                                 >
-                                    <TabPane tab="PRINCIPAL TOP" key="PRINCIPAL_TOP">
+                                    <TabPane
+                                        tab="PRINCIPAL TOP"
+                                        key="PRINCIPAL_TOP"
+                                    >
                                         <div className="py-4 px-3">
                                             <h2>Why do we use it?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
-                                    <TabPane tab="SEGUNDO TOP" key="SEGUNDO_TOP">
+                                    <TabPane
+                                        tab="SEGUNDO TOP"
+                                        key="SEGUNDO_TOP"
+                                    >
                                         <div className="py-4 px-3">
                                             <h2>What is Lorem Ipsum?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
-                                    <TabPane tab="TERCERO TOP" key="TERCERO_TOP">
+                                    <TabPane
+                                        tab="TERCERO TOP"
+                                        key="TERCERO_TOP"
+                                    >
                                         <div className="py-4 px-3">
                                             <h2>Where does it come from?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
@@ -78,20 +116,29 @@ class ExampleTabs extends Component {
                                         <div className="py-4 px-3">
                                             <h2>Where can I get some?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
-
                                 </Tabs>
                             </div>
                         </div>
@@ -109,75 +156,126 @@ class ExampleTabs extends Component {
                                     renderTabContent={() => <TabContent />}
                                     className="mb-4"
                                 >
-                                    <TabPane tab="PRINCIPAL BOTTOM" key="PRINCIPAL_BOTTOM">
+                                    <TabPane
+                                        tab="PRINCIPAL BOTTOM"
+                                        key="PRINCIPAL_BOTTOM"
+                                    >
                                         <div className="py-4 px-3">
                                             <h2>What is Lorem Ipsum?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
-                                    <TabPane tab="SEGUNDO BOTTOM" key="SEGUNDO_BOTTOM">
+                                    <TabPane
+                                        tab="SEGUNDO BOTTOM"
+                                        key="SEGUNDO_BOTTOM"
+                                    >
                                         <div className="py-4 px-3">
                                             <h2>Why do we use it?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
-                                    <TabPane tab="TERCERO BOTTOM" key="TERCERO_BOTTOM">
+                                    <TabPane
+                                        tab="TERCERO BOTTOM"
+                                        key="TERCERO_BOTTOM"
+                                    >
                                         <div className="py-4 px-3">
                                             <h2>Where does it come from?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
-                                    <TabPane tab="CUARTO BOTTOM" key="CUARTO_BOTTOM">
+                                    <TabPane
+                                        tab="CUARTO BOTTOM"
+                                        key="CUARTO_BOTTOM"
+                                    >
                                         <div className="py-4 px-3">
                                             <h2>Where can I get some?</h2>
                                             <p>
-                                                It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point of using
-                                                Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                                as opposed to using 'Content here, content here',
-                                                making it look like readable English. Many desktop
-                                                publishing packages and web page editors now use Lorem Ipsum as
-                                                their default model text, and a search for 'lorem ipsum' will
-                                                uncover many web sites still in their infancy. Various versions have
-                                                evolved over the years, sometimes by accident,
-                                                sometimes on purpose (injected humour and the like).
+                                                It is a long established fact
+                                                that a reader will be distracted
+                                                by the readable content of a
+                                                page when looking at its layout.
+                                                The point of using Lorem Ipsum
+                                                is that it has a more-or-less
+                                                normal distribution of letters,
+                                                as opposed to using 'Content
+                                                here, content here', making it
+                                                look like readable English. Many
+                                                desktop publishing packages and
+                                                web page editors now use Lorem
+                                                Ipsum as their default model
+                                                text, and a search for 'lorem
+                                                ipsum' will uncover many web
+                                                sites still in their infancy.
+                                                Various versions have evolved
+                                                over the years, sometimes by
+                                                accident, sometimes on purpose
+                                                (injected humour and the like).
                                             </p>
                                         </div>
                                     </TabPane>
-
                                 </Tabs>
                             </div>
                         </div>
